@@ -1,0 +1,21 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
+      >\n<!DOCTYPE HTML>\n<html>\n    <head>\n        <title>TradingView Charting\
+      \ Library example</title>\n        <script\n            src=\"_/theme/charting_library-master/charting_library/charting_library.standalone.js\"\
+      >\n        </script>\n        <script> src=\"_/theme/charting_library-master/datafeeds/udf/dist/bundle.js\"\
+      \n        <!-- Custom datafeed module. -->\n        <script type=\"module\"\
+      \ src=\"_/theme/charting_library-master/src/main.js\"></script>\n    </head>\n\
+      \    <body style=\"margin:0px;\">\n        <div id=\"chartContainer\">\n   \
+      \         <!-- This div will contain the Charting Library widget. -->\n    \
+      \      <script>\n            new Tradingview.widget({\n              container:\
+      \ 'chartContainer',\n              local: 'en',\n              library_path:\
+      \ \"_/theme/charting_library-master/charting_library/\",\n              datafeed:\
+      \ new Datafeeds.UDFCompatibleDatafeed('https://demo-feed-data.tradingview.com'),\n\
+      \              symbol: 'AAPL',\n              interval: '1D',\n            \
+      \  debug: true,\n            });\n\n          </script>\n    </body>\n</html>\n\
+      </center>"}
+components: []
+is_package: true
+component: []

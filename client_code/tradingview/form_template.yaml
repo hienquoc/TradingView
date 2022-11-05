@@ -1,0 +1,14 @@
+properties: []
+is_package: true
+component: []
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
+      >\n<!DOCTYPE HTML>\n<html>\n\t<head>\n\n\t\t<title>TradingView Charting Library\
+      \ demo</title>\n\n\t\t<!-- Fix for iOS Safari zooming bug -->\n\t\t<meta name=\"\
+      viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0\"\
+      >\n\n\t</head>\n\n\t<body style=\"margin:0px;\">\n\t\t<div id=\"tv_chart_container\"\
+      ></div>\n\t</body>\n\n</html>\n\n</center>"}

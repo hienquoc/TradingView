@@ -1,0 +1,42 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Form2}
+package_name: Trading_View_Charting_Library
+allow_embedding: false
+name: Trading View Charting Library
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-full
+  server_spec: {base: python310-datascience}
+startup_form: null
+native_deps: {head_html: "\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0\"\
+    >\n\n\t\t<script type=\"text/javascript\" src=\"_/theme/charting_library-master/charting_library/charting_library.standalone.js\"\
+    ></script>\n\t\t<script type=\"text/javascript\" src=\"_/theme/charting_library-master/datafeeds/udf/dist/bundle.js\"\
+    ></script>\n\n\t\t<script type=\"text/javascript\">\n\n\t\t\tfunction getParameterByName(name)\
+    \ {\n\t\t\t\tname = name.replace(/[\\[]/, \"\\\\[\").replace(/[\\]]/, \"\\\\]\"\
+    );\n\t\t\t\tvar regex = new RegExp(\"[\\\\?&]\" + name + \"=([^&#]*)\"),\n\t\t\
+    \t\t\tresults = regex.exec(location.search);\n\t\t\t\treturn results === null\
+    \ ? \"\" : decodeURIComponent(results[1].replace(/\\+/g, \" \"));\n\t\t\t}\n\n\
+    \t\t\tfunction initOnReady() {\n\t\t\t\tvar datafeedUrl = \"https://demo-feed-data.tradingview.com\"\
+    ;\n\t\t\t\tvar customDataUrl = getParameterByName('dataUrl');\n\t\t\t\tif (customDataUrl\
+    \ !== \"\") {\n\t\t\t\t\tdatafeedUrl = customDataUrl.startsWith('https://') ?\
+    \ customDataUrl : `https://${customDataUrl}`;\n\t\t\t\t}\n\n\t\t\t\tvar widget\
+    \ = window.tvWidget = new TradingView.widget({\n\t\t\t\t\t// debug: true, // uncomment\
+    \ this line to see Library errors and warnings in the console\n\t\t\t\t\tfullscreen:\
+    \ true,\n\t\t\t\t\tsymbol: 'AAPL',\n\t\t\t\t\tinterval: '1D',\n\t\t\t\t\tcontainer:\
+    \ \"tv_chart_container\",\n\n\t\t\t\t\t//\tBEWARE: no trailing slash is expected\
+    \ in feed URL\n\t\t\t\t\tdatafeed: new Datafeeds.UDFCompatibleDatafeed(datafeedUrl),\n\
+    \t\t\t\t\tlibrary_path: \"_/theme/charting_library-master/charting_library/\"\
+    ,\n\t\t\t\t\tlocale: getParameterByName('lang') || \"en\",\n\n\t\t\t\t\tdisabled_features:\
+    \ [\"use_localstorage_for_settings\"],\n\t\t\t\t\tenabled_features: [\"study_templates\"\
+    ],\n\t\t\t\t\tcharts_storage_url: 'https://saveload.tradingview.com',\n\t\t\t\t\
+    \tcharts_storage_api_version: \"1.1\",\n\t\t\t\t\tclient_id: 'tradingview.com',\n\
+    \t\t\t\t\tuser_id: 'public_user_id',\n\t\t\t\t\ttheme: getParameterByName('theme'),\n\
+    \t\t\t\t});\n\t\t\t};\n\n\t\t\twindow.addEventListener('DOMContentLoaded', initOnReady,\
+    \ false);\n\t\t</script>"}
+db_schema: {}
+renamed: true
